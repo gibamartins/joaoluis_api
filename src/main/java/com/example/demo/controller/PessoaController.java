@@ -32,9 +32,9 @@ public class PessoaController {
         return this.repository.findAll();
     }
 
-    //@GetMapping("{/pessoaId}"): Cria uma URI para receber requisições do tipo "GET", com o endereço "/pessoas/1",
+    //@GetMapping("/{pessoaId}"): Cria uma URI para receber requisições do tipo "GET", com o endereço "/pessoas/1",
     // sendo que o "1" indica o identificador único para a pessoa que se deseja buscar os dados.
-    @GetMapping("{/pessoaId}")
+    @GetMapping("/{pessoaId}")
     public Pessoa findById(@PathVariable("pessoaId") Long pessoaId) {
         return this.repository.findById(pessoaId)
                 .orElseThrow(() -> new RuntimeException("Pessoa não encontrada"));

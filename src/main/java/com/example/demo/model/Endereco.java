@@ -14,7 +14,7 @@ public class Endereco {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "O logradouro é obrigatório")
+    @NotBlank(message = "O logradouro, da classe Endereco, é obrigatório")
     @Column(length = 512, nullable = false)
     private String logradouro;
 
